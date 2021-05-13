@@ -38,6 +38,8 @@ async function run() {
         core.setOutput('registry', registryUri);
       }
 
+      core.setOutput('password', creds[1]);
+      core.setOutput('dockerServer', proxyEndpoint);
       // Execute the docker login command
       let doLoginStdout = '';
       let doLoginStderr = '';
